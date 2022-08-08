@@ -8,6 +8,9 @@ contract JongsToken {
     uint8 public decimals = 18;
     uint256 public totalSupply = 1000000 * 10 ** decimals;
     
+    // transfer 함수 실행됐을 때 이벤트발동
+    event Transfer(address  _from, address _to, uint256 _value);
+    
     constructor(){
         balances[msg.sender] = totalSupply;
     }
@@ -20,7 +23,8 @@ contract JongsToken {
         require(balances[msg.sender] >= _value);
         balances[msg.sender] -= _value;
         balances[_to] += _value;
-       return true;
+        emit Transfer(msg.sender, _to, _value);
+        return true;
     }
 
 }
