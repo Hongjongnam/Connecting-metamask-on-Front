@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import ABIandCA from "../contracts/Counter.json";
+import ABIandCA from "../../src/contracts/Counter.json";
 
 // props.web , props.account
 const Counter = ({ web3, account }) => {
@@ -12,7 +12,7 @@ const Counter = ({ web3, account }) => {
 
   const increment = async () => {
     // front 에서 tx일으켜 increment 함수실행
-    const result = await needFC.methods.increment().send({
+    await needFC.methods.increment().send({
       from: account,
     });
   };
@@ -20,9 +20,12 @@ const Counter = ({ web3, account }) => {
   const decrement = async () => {
     // back 서버를 통해 tx를 일으켜 decrement 함수실행
     // api 요청 할 수 있는 작업
-    const response = await axios.post("http://localhost:3005/api/decrement", {
-      from: account,
-    });
+    const response = await axios.post(
+      "http://localhost:3005/api/counter/decrement",
+      {
+        from: account,
+      }
+    );
     console.log("back에서 응답받은 데이터값", response.data);
 
     // metamask에 던지는 코드
