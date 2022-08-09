@@ -1,7 +1,7 @@
 ## 0714
 
-- event
-  websocket처럼 동작될 수 있다. // log를 남긴다.
+- back 서버 구축
+
 
 ## directory
 
