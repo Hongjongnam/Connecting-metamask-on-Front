@@ -2,7 +2,7 @@
 
 - Token 발행 전 mapping에 대한 설명좀 길게 하셨습니다.
 - 그냥 typescript로 타입지정하는걸 solidity에서는 mapping하는것과 같다고 보면 편할듯!
-- 아래는 예시코드 !
+- 아래는 예시코드 !!
 
 ```typescript
 interface balance {
