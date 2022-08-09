@@ -1,5 +1,3 @@
 ## appleshop
 
-payable 속성이 있을 경우 ca 에 eth를 받을수있는 상태가된다.
-
-//0xBa397b21f73069b13120CA498055E0dCA3db3A21
+![사과앱](https://user-images.githubusercontent.com/99451509/183590610-914032ae-32ce-48ea-8b78-b941f24c4f7b.png)
